@@ -62,7 +62,8 @@ import { TrendingblogsComponent } from './trendingblogs/trendingblogs.component'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CreateblogComponent } from './createblog/createblog.component';
 import { NgxEditorModule } from 'ngx-editor';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
   declarations: [
@@ -124,7 +125,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     IonicModule,
     MatSidenavModule,
     NgxEditorModule,
-    CKEditorModule
+    // CKEditorModule,
+    AngularEditorModule
     // NgbModule
   ],
   providers: [CookieService,MessagingService,{

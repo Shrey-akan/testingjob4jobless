@@ -22,7 +22,7 @@ import { UpdatejobComponent } from './updatejob/updatejob.component';
 import { SetQuestionComponent } from './set-question/set-question.component';
 import { DisapprovejobComponent } from './disapprovejob/disapprovejob.component';
 import { NgxEditorModule } from 'ngx-editor';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     DashboardempComponent,
@@ -47,8 +47,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     ReactiveFormsModule,
     MatSelectModule,
     FormsModule,
-    NgxEditorModule,
-    CKEditorModule
+    NgxEditorModule
+    // CKEditorModule
   ]
 })
 export class DashboardempModule { }

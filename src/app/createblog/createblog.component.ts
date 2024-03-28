@@ -6,7 +6,7 @@ import { blogconst } from '../constant';
 import { Observable , throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 interface ContentBlock {
   type: string;
   data: {
@@ -22,8 +22,7 @@ interface ContentBlock {
 export class CreateblogComponent {
   blogForm!: FormGroup;
   private apiUrl = 'https://hustleforwork.com:3000/create-blog';
-  title = 'angular';
-  public Editor: any = ClassicEditor;
+
 
   constructor(
     private fb: FormBuilder,

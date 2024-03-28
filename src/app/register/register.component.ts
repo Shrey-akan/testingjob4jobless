@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 import * as intelInput from "intl-tel-input";
 import { backendUrl, OtpUrl } from '../constant';
 import { error } from 'jquery';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -18,8 +19,6 @@ export class RegisterComponent implements OnInit {
   private backend_URL = `${backendUrl}`;
   private Otp_URL = `${OtpUrl}`;
 
-  title = 'angular';
-  public Editor: any = ClassicEditor;
 
 
   isHovered = false;
