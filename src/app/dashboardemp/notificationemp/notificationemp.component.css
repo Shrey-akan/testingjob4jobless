@@ -1,0 +1,32 @@
+.notification {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .notification h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .notification p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .custom-btn {
+    color: white;
+    background-color: #1e2e5c;
+}
+.status-option {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.status-option:hover {
+  background-color: #f0f0f0;
+}

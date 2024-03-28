@@ -1,0 +1,99 @@
+<app-trendingblogs></app-trendingblogs>
+<button class="floating-signin-button" (click)="openSignInModal()">Sign In</button>
+<div class="modal" id="signInModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="centered-buttons">
+          <button class="btn btn-primary" (click)="showSignIn()">SignIn</button>
+          <button class="btn btn-danger" (click)="showSignUp()">SignUp</button>
+        </div>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeSignInModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-container *ngIf="showLoginForm">
+          <form [formGroup]="loginform" (ngSubmit)="login(loginform)">
+            <div class="form-group">
+              <input type="email" class="form-control px-4 rounded-pill" formControlName="email" id="email"
+                placeholder="Email"
+                [ngClass]="{ 'is-invalid': loginform.get('email')?.invalid && loginform.get('email')?.touched }" />
+              <!-- <div class="invalid-feedback" *ngIf="loginform.get('email')?.hasError('required')">
+                Email is required.
+              </div>
+              <div class="invalid-feedback" *ngIf="loginform.get('email')?.hasError('email')">
+                Please enter a valid email address.
+              </div> -->
+            </div>
+            <div class="form-group d-flex justify-content-between align-items-center">
+              <input type="password" class="form-control px-4 rounded-pill" formControlName="password" id="password"
+                placeholder="Password" [type]="passwordVisible ? 'text' : 'password'"
+                [ngClass]="{ 'is-invalid': loginform.get('password')?.invalid && loginform.get('password')?.touched }" />
+              <div (click)="togglePasswordVisibility()" class="px-2 eye-icon">
+                <div *ngIf="passwordVisible; else hidePassword">
+                  <i class="fa-solid fa-eye-slash"></i>
+                </div>
+                <ng-template #hidePassword>
+                  <i class="fa-solid fa-eye"></i>
+                </ng-template>
+              </div>
+              <!-- <div class="invalid-feedback" *ngIf="loginform.get('password')?.hasError('required') && loginform.get('password')?.touched">
+                Password is required.
+              </div> -->
+            </div>
+            <div class="form-group d-flex flex-column justify-content-center align-items-stretch">
+              <button type="submit" class="btn rounded-pill my-3" style="background-color: #1E2E5C; color: white;">Sign
+                In</button>
+              <!-- <button class="btn rounded-pill custom-google" (click)="loginWithGoogle()">
+                <i class="fab fa-google"></i>&nbsp; &nbsp;Sign In with Google
+              </button> -->
+              <button class="btn rounded-pill custom-google" (click)="loginWithGoogle()">
+                <i class="fab fa-google"></i>&nbsp; &nbsp;Sign In with Google
+              </button>
+            </div>
+          </form>
+        </ng-container>
+        <ng-container *ngIf="showSignUpForm">
+          <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm)">
+            <div class="form-group">
+              <input type="text" class="form-control px-4 rounded-pill" formControlName="fullname" id="fullname"
+                placeholder="Full Name"
+                [ngClass]="{ 'is-invalid': signupForm.get('fullname')?.invalid && signupForm.get('fullname')?.touched }" />
+
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control px-4 rounded-pill" formControlName="email" id="email"
+                placeholder="Email"
+                [ngClass]="{ 'is-invalid': signupForm.get('email')?.invalid && signupForm.get('email')?.touched }" />
+
+            </div>
+            <div class="form-group d-flex justify-content-between align-items-center">
+              <input type="password" class="form-control px-4 rounded-pill" formControlName="password" id="password"
+                placeholder="Password" [type]="passwordVisible ? 'text' : 'password'"
+                [ngClass]="{ 'is-invalid': signupForm.get('password')?.invalid && signupForm.get('password')?.touched }" />
+              <div (click)="togglePasswordVisibility()" class="px-2 eye-icon">
+                <div *ngIf="passwordVisible; else hidePassword">
+                  <i class="fa-solid fa-eye-slash"></i>
+                </div>
+                <ng-template #hidePassword>
+                  <i class="fa-solid fa-eye"></i>
+                </ng-template>
+              </div>
+
+            </div>
+            <div class="form-group d-flex flex-column justify-content-center align-items-stretch">
+              <button type="submit" class="btn rounded-pill my-3" style="background-color: #1E2E5C; color: white;">Sign
+                Up</button>
+            </div>
+            <button class="btn rounded-pill custom-google" (click)="loginWithGoogle()">
+              <i class="fab fa-google"></i>&nbsp; &nbsp;Sign Up with Google
+            </button>
+          </form>
+
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

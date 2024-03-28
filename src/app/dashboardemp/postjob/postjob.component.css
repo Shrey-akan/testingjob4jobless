@@ -1,0 +1,68 @@
+/* Apply CSS animations to the form */
+.container {
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  /* .form-control {
+    transition: border-color 0.3s ease-in-out;
+  } */
+  
+  /* Define the animation keyframes */
+  /* @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+  /* Apply hover effects to form elements */
+.form-control:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  /* Add hover effect styles */
+button.btn-primary:hover {
+  transform: scale(1.1); /* Scale the button when hovered */
+  transition: transform 0.2s ease; /* Add a smooth transition */
+}
+.custom-btn {
+  color: white;
+  background-color: #1e2e5c;
+}
+
+/* Styles for the ngx-editor to integrate with Bootstrap */
+.ngx-bootstrap-editor {
+  border: 1px solid #ced4da; /* Bootstrap's border color */
+  border-radius: 0.25rem; /* Bootstrap's border radius */
+  display: block;
+}
+
+.ngx-bootstrap-editor .editor-toolbar {
+  border-bottom: 1px solid #ced4da; /* Border color for the toolbar */
+}
+
+.ngx-bootstrap-editor .editor-content {
+  min-height: 300px; /* Minimum height for the content area */
+  border-top: none; /* Remove top border between toolbar and content */
+}
+
+/* Bootstrap style overrides for specific states */
+.ngx-bootstrap-editor:focus-within {
+  border-color: #86b7fe; /* Bootstrap's focus state border color */
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(13,110,253,.25); /* Bootstrap's focus state shadow */
+}
+
+/* Continuing with the existing styles */
+.text-danger {
+  color: #dc3545; /* Bootstrap's color for error messages */
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Bootstrap's bottom margin for form groups */
+}
+
+.form-label {
+  margin-bottom: 0.5rem; /* Bootstrap's bottom margin for labels */
+}

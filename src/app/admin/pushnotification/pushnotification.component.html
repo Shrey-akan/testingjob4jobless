@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form class="shadow p-4 rounded bg-light" [formGroup]="form" (ngSubmit)="handleSubmit()">
+        <div class="form-group">
+          <label for="title" style="font-size: 20px;">Title:</label>
+          <input type="text" formControlName="title" id="title" placeholder="Enter title" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="body" style="font-size: 20px;">Body:</label>
+          <textarea formControlName="body" id="body" placeholder="Enter body" rows="10" class="form-control"
+            required></textarea>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label"for="selectToken" style="font-size: 20px;">Select Token:</label>
+          <div class="col-sm-12">
+            <select multiple formControlName="selectedValues" id="selectToken" class="form-control">
+              <option *ngFor="let option of options" [ngValue]="option" >{{ option.token }}</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

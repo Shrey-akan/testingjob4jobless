@@ -1,0 +1,38 @@
+<div class="container" [hidden]="!showJobFeed" id="jbfeed">
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="container">
+            <app-jobcardu></app-jobcardu>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" [hidden]="!showJobSearches" id="showsearches">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th>Job Title</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let application of datajobs">
+
+                            <td>{{ application.jujobtitle }}</td> <!-- Display jujobtitle -->
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

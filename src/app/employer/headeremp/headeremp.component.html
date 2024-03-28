@@ -1,0 +1,50 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" *ngIf="showNavbaremp">
+      <div class="container">
+          <a class="navbar-brand" routerLink="/">
+              <img src="assets/Asset 1@4x-8.png" width="200" class="image-thumbnail d-inline-block">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     
+              <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employer"  [routerLinkActiveOptions]={exact:true} routerLinkActive="active">Post a job</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employer/products" routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employer/resources" routerLinkActive="active">Resources</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown">
+            More Options
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item" routerLink="/employer/help-center" style="color: black;" routerLinkActive="active">Help Center <i
+                  class="fa-solid fa-question"></i></a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/login" style="color: black;" target="_blank" routerLinkActive="active">Find Jobs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngIf="!isEmpSignPage">
+          <a class="nav-link" routerLink="/employer/empsign" routerLinkActive="active">
+            <button class="btn btn-custom rounded-pills rounded-pill">Start Hiring&nbsp; &nbsp;<i class="fa-solid fa-chevron-right"></i></button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

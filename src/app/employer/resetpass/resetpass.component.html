@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h1 class="mb-4">Check Employer Existence*</h1>
+          <form [formGroup]="employerForm" (submit)="checkUser()">
+            <div class="form-group">
+              <label for="empmailid">Email (must be a valid Gmail address):</label>
+              <input type="email" class="form-control" formControlName="empmailid" placeholder="Enter Email">
+              <div *ngIf="employerForm.get('empmailid')?.hasError('required') && employerForm.get('empmailid')?.touched"
+                class="text-danger">Email is required.
+              </div>
+              <div *ngIf="employerForm.get('empmailid')?.hasError('email') && employerForm.get('empmailid')?.touched"
+                class="text-danger">Please enter a valid email address.
+              </div>
+            </div>
+            <button class="btn custom-btn rounded-pill" >Check User</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="loader-overlay" *ngIf="loading">
+      <div class="loader"></div>
+    </div>
+  </div>
+  

@@ -1,0 +1,28 @@
+<form [formGroup]="blogForm" (ngSubmit)="createBlog()" class="form-container">
+  <label>Title:</label>
+  <input type="text" formControlName="title" required>
+
+  <label>Description:</label>
+  <textarea formControlName="des" required></textarea>
+
+  <label>Banner URL:</label>
+  <input type="text" formControlName="banner">
+
+  <label>Tags:</label>
+  <div formArrayName="tags">
+    <div *ngFor="let tagControl of tags.controls; let i=index">
+      <input type="text" [formControlName]="i">
+      <button type="button" (click)="removeTag(i)">Remove</button>
+    </div>
+  </div>
+  <button type="button" (click)="addTag()">Add Tag</button>
+
+  <div class="form-group">
+    <label for="content" class="form-label">Content</label>
+    <ckeditor [editor]="Editor" formControlName="content"></ckeditor>
+  </div>
+
+  <button type="submit">Create Blog</button>
+</form>
+
+  

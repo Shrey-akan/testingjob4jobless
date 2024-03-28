@@ -1,0 +1,90 @@
+.status-option {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.status-option:hover {
+  background-color: #f0f0f0;
+}
+.custom-btn {
+  color: white;
+  background-color: #1e2e5c;
+}
+.status-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.status {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.status-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.status-label {
+  margin-right: 10px;
+}
+
+.status.active .status-number {
+  background-color: #388a53;
+  color: #fff;
+  border-color: transparent;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 1px); /* Adjust the position of the vertical line */
+  width: 2px;
+  background-color: #ccc;
+  z-index: -1;
+}
+.circle-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+}
+
+.waiting-icon {
+  background-color: #fb9379;
+  color: #ffffff;
+}
+
+.reviewed-icon {
+  background-color: #fb9379;
+  color: #ffffff;
+}
+
+.selected-icon {
+  background-color: #388a53;
+  color: #ffffff;
+}
+
+.rejected-icon {
+  background-color: #ac2402;
+  color: #ffffff;
+}

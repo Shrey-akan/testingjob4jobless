@@ -1,0 +1,26 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 2em 0;
+  font-family: 'Poppins', sans-serif;
+  color: #495057;
+}
+
+.footer a {
+  color: #1E2E5C;
+}
+
+.footer a:hover {
+  color: #0056b3;
+}
+
+.social-list li {
+  margin: 0 10px;
+}
+
+.contact-details p {
+  margin-bottom: 5px;
+}
+
+.non-bold-text {
+  font-weight: normal;
+}

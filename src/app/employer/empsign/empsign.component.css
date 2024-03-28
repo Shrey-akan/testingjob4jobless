@@ -1,0 +1,20 @@
+
+p,
+a,
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-google {
+  background-color: white;
+  color: #1E2E5C;
+    background-color: #1E2E5C;
+  color: white;
+  outline: 2px solid #1E2E5C;
+}
+
+.custom-google:hover {
+  background-color: white;
+  color: #1E2E5C;
+  outline: 2px solid #1E2E5C;
+}

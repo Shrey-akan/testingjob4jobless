@@ -1,0 +1,26 @@
+.font-gelasio {
+    font-family: Gelasio, serif;
+}
+
+.custom-table {
+    width: 100%; /* Set table width to 100% */
+    border: 1px solid black;
+}
+
+.btnwidth
+{
+    width: 1%;
+    text-align: center; /* Center-align the contents of the table cell */
+    vertical-align: middle; /* Vertical alignment of the cell */
+    height: 100%;
+}
+.btnwidth1
+{
+    width: 3%;
+    text-align: center; /* Center-align the contents of the table cell */
+    vertical-align: middle; /* Vertical alignment of the cell */
+    height: 100%;
+}
+.btnwidth .btn {
+    margin: 0 auto; /* Center the button horizontally within the cell */
+}

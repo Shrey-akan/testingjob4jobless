@@ -1,0 +1,38 @@
+<div class="loader-container" *ngIf="isloading">
+  <div class="loader"></div>
+</div>
+
+<div class="latest-blogs" style="border-right: 2px solid #ccc;" *ngIf="!isloading">
+  <ul style="list-style-type: none;">
+    <li *ngFor="let blog of blogs" class="blog-item">
+      <div class="table-padding">
+        <table class="responsive-table">
+          <tr class="padding-row">
+            <td style="width: 100%;" class="padding-row">
+              <h1 style="padding-top: 2%; line-height: 2.5rem;" class="font-gelasio">
+                <a (click)="navigateToBlogDetails(blog.blog_id)" style="text-decoration: none; cursor: pointer;">
+                  {{ blog.title }}
+                </a>
+              </h1>
+
+              <ul>
+                <li *ngFor="let item of blog.content">{{ item }}</li>
+              </ul>
+              <p class="description font-gel">{{ blog.des }}</p>
+              <div class="button-style" style="padding-top: 2%; padding-bottom: 2%;">
+                <span *ngFor="let tag of blog.tags" style="font-family: Gelasio, serif; font-size: 1.2rem ;"
+                  class="category-button">{{ capitalizeFirstLetter(tag) }}</span>
+              </div>
+            </td>
+            <td class="image-column"> <!-- Add text-align: right; -->
+              <img [src]="blog.banner" alt="Blog Image" width="195" height="140">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </li>
+  </ul>
+  <div class="button-container">
+    <button class="btn btn-primary my-4" (click)="loadMoreBlogs()">Load More</button>
+  </div>
+</div>
